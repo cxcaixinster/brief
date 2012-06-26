@@ -25,7 +25,6 @@
 
 
 #feed-title-box {
-    display: -moz-box;
     margin-right: 10px !important;
     /* These are to cut off the later lines when the title wraps. */
     overflow: hidden;
@@ -33,17 +32,14 @@
     max-height: 36px !important;
 }
 
-/* 
- * This style is to avoid warning: "XUL box for div element contained 
- * an inline a child, forcing all its children to be wrapped in a block", 
- * which is caused by the previous style.
- */
-#feed-title-box > #feed-title {
-    display: inline-block;
-}
-
-
 #feed-title {
+    /*
+     * This style is to avoid warning: "XUL box for div element contained
+     * an inline a child, forcing all its children to be wrapped in a block",
+     * which is caused by the previous style.
+     */
+    display: inline-block;
+
     color: #05447e;
     font-size: 18px;
     font-weight: bold;
