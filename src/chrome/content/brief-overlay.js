@@ -41,13 +41,16 @@ const Brief = {
     },
 
     open: function Brief_open(aInCurrentTab) {
+        let reusableURLs = [ 'about:blank',
+                             'about:newtab',
+                             'about:privatebrowsing' ];
         let loading = gBrowser.webProgress.isLoadingDocument;
-        let blank = (gBrowser.currentURI.spec == 'about:blank');
+        let reusable = reusableURLs.indexOf(gBrowser.currentURI.spec) != -1;
         let briefTab = this.getBriefTab();
 
         if (briefTab)
             gBrowser.selectedTab = briefTab;
-        else if (blank && !loading || aInCurrentTab)
+        else if (reusable && !loading || aInCurrentTab)
             gBrowser.loadURI(this.BRIEF_URL, null, null);
         else
             gBrowser.loadOneTab(this.BRIEF_URL, { inBackground: false });
