@@ -13,11 +13,11 @@ contract  @brief.mozdev.org/briefservice;1  {943b2280-6457-11df-a08a-0800200c9a6
 category  profile-after-change  BriefService  @brief.mozdev.org/briefservice;1
 category  vacuum-participant    BriefService  @brief.mozdev.org/briefservice;1
 
-locale  brief   en-US  chrome/locale/en-US/
 locale  brief   cs     chrome/locale/cs/
 locale  brief   da     chrome/locale/da/
 locale  brief   de     chrome/locale/de/
 locale  brief   el     chrome/locale/el/
+locale  brief   en-US  chrome/locale/en-US/
 locale  brief   es-ES  chrome/locale/es-ES/
 locale  brief   fr     chrome/locale/fr/
 locale  brief   gl     chrome/locale/gl/
